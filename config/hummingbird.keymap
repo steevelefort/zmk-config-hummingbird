@@ -76,6 +76,23 @@
         };
     };
 
+
+    macros {
+        open_angle_quote: open_angle_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(NUMBER_2) &kp LS(SPACE)>;
+            label = "OPEN_ANGLE_QUOTE";
+        };
+
+        closed_angle_quote: closed_angle_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(SPACE) &kp LS(NUMBER_3)>;
+            label = "CLOSED_ANGLE_QUOTE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
