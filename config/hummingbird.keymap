@@ -17,8 +17,6 @@
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 
-&lt { quick-tap-ms = <200>; };
-
 / {
     behaviors {
         hml: hml {
@@ -46,6 +44,20 @@
             require-prior-idle-ms = <150>;
             hold-trigger-on-release;
         };
+
+        hroa: hroa {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&open_angle_quote>;
+
+            hold-trigger-key-positions = <5 6 7 8 9 19 18 17 16 15 23 24 25 29 28 27 26>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            label = "HROA";
+        };
     };
 
     combos {
@@ -63,19 +75,18 @@
             bindings = <&kp B>;
         };
 
-        combo_y {
+        combo_dot {
             timeout-ms = <50>;
             key-positions = <23 24>;
-            bindings = <&kp Y>;
+            bindings = <&kp N>;
         };
 
-        combo_slash {
+        combo_k {
             timeout-ms = <50>;
             key-positions = <24 25>;
             bindings = <&kp SLASH>;
         };
     };
-
 
     macros {
         open_angle_quote: open_angle_quote {
@@ -118,10 +129,10 @@
         num_layer {
             display-name = "NUMERIC";
             bindings = <
-&kp F1  &kp F2  &kp F3        &kp F4   &kp F5     &kp F6   &kp F7   &kp F8        &kp F9  &kp F10
-&kp N1  &kp N2  &kp N3        &kp N4   &kp N5     &kp N6   &kp N7   &kp N8        &kp N9  &kp N0
-        &kp N1  &hml LALT N2  &kp N3                       &kp N8   &hmr LALT N9  &kp N0
-                              &kp F11  &kp F12    &kp F11  &kp F12
+&kp F1  &kp F2  &kp F3        &kp F4               &kp F5     &kp F6   &kp F7   &kp F8        &kp F9  &kp F10
+&kp N1  &kp N2  &kp N3        &kp N4               &kp N5     &kp N6   &kp N7   &kp N8        &kp N9  &kp N0
+        &kp N1  &hroa LALT 0  &closed_angle_quote                      &kp N8   &hmr LALT N9  &kp N0
+                              &kp F11              &kp F12    &kp F11  &kp F12
             >;
         };
 
