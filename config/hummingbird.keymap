@@ -139,9 +139,9 @@
         Media {
             display-name = "Sym";
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans                    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans             &trans      &trans           &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &trans
+        &trans  &trans  &trans                    &trans             &trans      &trans
                         &trans  &trans    &trans  &trans
             >;
         };
