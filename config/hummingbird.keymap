@@ -96,19 +96,19 @@
         nav_layer {
             display-name = "Nav";
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans   &kp HOME  &kp UP    &kp PG_UP  &trans
-&trans  &trans  &trans  &trans  &trans    &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-        &trans  &trans  &trans                     &kp END   &trans    &kp PG_DN
-                        &trans  &trans    &kp ESC  &kp DEL
+&trans  &trans  &trans             &trans  &trans    &trans       &kp HOME       &kp END        &trans      &kp PRINTSCREEN
+&trans  &trans  &hml LCTRL ESCAPE  &trans  &trans    &kp LEFT     &kp DOWN       &kp UP_ARROW   &kp RIGHT   &kp CAPS
+        &trans  &trans             &trans  &trans    &trans       &kp PAGE_DOWN  &kp PAGE_DOWN  &trans
+                                   &trans  &trans    &trans       &lt 2 DELETE
             >;
         };
 
         num_layer {
-            display-name = "Num";
+            display-name = "NUMERIC";
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5     &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
 &kp N1  &kp N2  &kp N3  &kp N4   &kp N5     &kp N6   &kp N7   &kp N8  &kp N9  &kp N0
-        &kp N1  &kp N2  &kp N3                       &trans   &trans  &trans
+        &kp N1  &kp N2  &kp N3                       &kp N8   &kp N9  &kp N0
                         &kp F11  &kp F12    &kp F11  &kp F12
             >;
         };
