@@ -96,10 +96,10 @@
         nav_layer {
             display-name = "Nav";
             bindings = <
-&trans  &trans  &trans             &trans  &trans    &trans       &kp HOME       &kp END        &trans      &kp PRINTSCREEN
-&trans  &trans  &hml LCTRL ESCAPE  &trans  &trans    &kp LEFT     &kp DOWN       &kp UP_ARROW   &kp RIGHT   &kp CAPS
-        &trans  &trans             &trans  &trans    &trans       &kp PAGE_DOWN  &kp PAGE_DOWN  &trans
-                                   &trans  &trans    &trans       &lt 2 DELETE
+&trans  &trans  &trans             &trans  &trans    &trans    &kp HOME       &kp END       &trans     &kp PRINTSCREEN
+&trans  &trans  &hml LCTRL ESCAPE  &trans  &trans    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPS
+        &trans  &trans             &trans                      &kp PAGE_DOWN  &kp PG_UP     &trans
+                                   &trans  &trans    &trans    &trans
             >;
         };
 
@@ -113,13 +113,22 @@
             >;
         };
 
-        sym_layer {
+        Media {
             display-name = "Sym";
             bindings = <
 &kp LBRC   &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp RBRC     &trans  &trans  &trans  &trans  &trans
 &kp COLON  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp PLUS     &trans  &trans  &trans  &trans  &trans
            &kp LS(N1)  &kp LS(N2)  &kp LS(N3)                       &trans  &trans  &trans
                                    &kp LS(N0)  &kp UNDER    &trans  &trans
+            >;
+        };
+
+        Mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans                    &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
     };
