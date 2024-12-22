@@ -19,5 +19,5 @@
 #
 ---
 include:
-  - board: sparkfun_pro_micro_rp2040
+  - board: seeeduino_xiao_rp2040
     shield: hummingbird
