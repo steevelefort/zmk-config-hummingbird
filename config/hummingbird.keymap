@@ -86,6 +86,26 @@
             key-positions = <24 25>;
             bindings = <&kp SLASH>;
         };
+
+        ZCombo {
+            bindings = <&kp Z>;
+            key-positions = <0 10>;
+        };
+
+        BCombo {
+            bindings = <&kp B>;
+            key-positions = <4 14>;
+        };
+
+        DotCombo {
+            bindings = <&kp N>;
+            key-positions = <5 15>;
+        };
+
+        KCombo {
+            bindings = <&kp SLASH>;
+            key-positions = <9 19>;
+        };
     };
 
     macros {
