@@ -139,10 +139,10 @@
         nav_layer {
             display-name = "Nav";
             bindings = <
-&trans  &trans  &trans             &trans  &trans    &trans    &kp HOME       &kp END       &trans     &kp PRINTSCREEN
-&trans  &trans  &hml LCTRL ESCAPE  &trans  &trans    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPS
-        &trans  &trans             &trans                      &kp PAGE_DOWN  &kp PG_UP     &trans
-                                   &trans  &trans    &trans    &kp DEL
+&trans  &trans  &trans             &kp RA(SEMICOLON)      &trans       &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &kp PRINTSCREEN
+&trans  &trans  &hml LCTRL ESCAPE  &hml LEFT_SHIFT LC(B)  &kp RA(T)    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPS
+        &kp Z   &trans             &kp B                                         &kp N          &trans        &kp SLASH
+                                   &trans                 &trans       &trans    &kp DEL
             >;
         };
 
