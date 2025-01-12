@@ -89,22 +89,32 @@
 
         ZCombo {
             bindings = <&kp Z>;
-            key-positions = <0 10>;
+            key-positions = <26 20>;
         };
 
         BCombo {
             bindings = <&kp B>;
-            key-positions = <4 14>;
+            key-positions = <26 22>;
         };
 
         DotCombo {
             bindings = <&kp N>;
-            key-positions = <5 15>;
+            key-positions = <29 23>;
         };
 
         KCombo {
             bindings = <&kp SLASH>;
-            key-positions = <9 19>;
+            key-positions = <29 25>;
+        };
+
+        DotCombo2 {
+            bindings = <&kp N>;
+            key-positions = <23 26>;
+        };
+
+        KCombo2 {
+            bindings = <&kp SLASH>;
+            key-positions = <25 26>;
         };
     };
 
