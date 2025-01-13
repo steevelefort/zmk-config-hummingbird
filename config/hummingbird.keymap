@@ -193,7 +193,7 @@
         SpeedMouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans    &trans            &msc SCRL_LEFT   &msc SCRL_RIGHT   &trans           &trans
-&trans  &trans  &trans  &trans  &trans    &mmv MOVE_X(-100)  &mmv MOVE_Y(100)  &mmv MOVE_Y(-100)  &mmv MOVE_X(100)  &mkp MCLK
+&trans  &trans  &trans  &trans  &trans    &mmv MOVE_X(-600)  &mmv MOVE_Y(600)  &mmv MOVE_Y(-600)  &mmv MOVE_X(600)  &mkp MCLK
         &trans  &trans  &trans                              &msc SCRL_DOWN   &msc SCRL_UP      &trans
                         &trans  &trans    &mkp RCLK         &mkp LCLK
             >;
