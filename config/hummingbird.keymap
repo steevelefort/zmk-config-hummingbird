@@ -172,7 +172,7 @@
         };
 
         Media {
-            display-name = "Sym";
+            display-name = "Media";
             bindings = <
 &trans  &trans  &trans  &trans  &trans    &trans  &trans             &trans      &trans           &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &trans
@@ -188,6 +188,15 @@
         &trans  &trans  &trans                            &msc SCRL_DOWN  &msc SCRL_UP     &trans
                         &trans  &trans    &mkp RCLK       &mkp LCLK
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        MediaLayer {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
