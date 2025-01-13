@@ -144,10 +144,10 @@
 
         default_layer {
             bindings = <
-&kp Q        &kp W        &kp E         &kp R            &kp T        &kp Y             &kp U         &kp I            &kp O        &kp P
-&hml LGUI A  &hml RALT S  &hml LCTRL D  &hml LSHFT F     &kp G        &kp H             &hmr RSHFT J  &hmr RCTRL K     &hmr RALT L  &hmr RGUI SEMICOLON
-             &kp X        &hml LALT C   &kp V                                           &kp M         &hmr LALT COMMA  &kp DOT
-                                        &lt NAV_L SPACE  &lt 4 TAB    &mt LSHIFT ENTER  &lt 2 BSPC
+&kp Q        &kp W        &kp E         &kp R         &kp T        &kp Y             &kp U         &kp I            &kp O        &kp P
+&hml LGUI A  &hml RALT S  &hml LCTRL D  &hml LSHFT F  &kp G        &kp H             &hmr RSHFT J  &hmr RCTRL K     &hmr RALT L  &hmr RGUI SEMICOLON
+             &kp X        &hml LALT C   &kp V                                        &kp M         &hmr LALT COMMA  &kp DOT
+                                        &lt 1 SPACE   &lt 4 TAB    &mt LSHIFT ENTER  &lt 2 BSPC
             >;
         };
 
@@ -189,6 +189,15 @@
                         &trans  &trans    &mkp RCLK       &mkp LCLK
             >;
         };
+
+        SpeedMouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans            &msc SCRL_LEFT   &msc SCRL_RIGHT   &trans           &trans
+&trans  &trans  &trans  &trans  &trans    &mmv MOVE_X -100  &mmv MOVE_Y 100  &mmv MOVE_Y -100  &mmv MOVE_X 100  &mkp MCLK
+        &trans  &trans  &trans                              &msc SCRL_DOWN   &msc SCRL_UP      &trans
+                        &trans  &trans    &mkp RCLK         &mkp LCLK
+            >;
+        };
     };
 
     conditional_layers {
@@ -197,6 +206,11 @@
         MediaLayer {
             if-layers = <1 2>;
             then-layer = <3>;
+        };
+
+        SpeedMouseLayer {
+            if-layers = <1 4>;
+            then-layer = <5>;
         };
     };
 };
