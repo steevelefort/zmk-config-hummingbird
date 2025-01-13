@@ -116,6 +116,11 @@
             bindings = <&kp SLASH>;
             key-positions = <25 26>;
         };
+
+        ComboEsc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <26 12>;
+        };
     };
 
     macros {
