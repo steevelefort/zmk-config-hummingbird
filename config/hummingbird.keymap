@@ -111,26 +111,6 @@
             bindings = <&kp ESCAPE>;
             key-positions = <26 12>;
         };
-
-        c_z {
-            bindings = <&kp Z>;
-            key-positions = <11 12>;
-        };
-
-        c_b {
-            bindings = <&kp B>;
-            key-positions = <13 12>;
-        };
-
-        c_dot {
-            bindings = <&kp N>;
-            key-positions = <16 17>;
-        };
-
-        c_k {
-            bindings = <&kp SLASH>;
-            key-positions = <17 18>;
-        };
     };
 
     macros {
