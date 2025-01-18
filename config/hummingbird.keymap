@@ -153,6 +153,26 @@
             timeout-ms = <20>;
             slow-release;
         };
+
+        cb_z {
+            bindings = <&kp Z>;
+            key-positions = <11 20>;
+        };
+
+        cb_b {
+            bindings = <&kp B>;
+            key-positions = <13 22>;
+        };
+
+        cb_dot {
+            bindings = <&kp N>;
+            key-positions = <16 23>;
+        };
+
+        cb_k {
+            bindings = <&kp SLASH>;
+            key-positions = <18 25>;
+        };
     };
 
     macros {
