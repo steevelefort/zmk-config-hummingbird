@@ -129,32 +129,28 @@
         cz {
             bindings = <&kp Z>;
             key-positions = <11 12>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <10>;
             slow-release;
         };
 
         cb {
             bindings = <&kp B>;
             key-positions = <12 13>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <10>;
             slow-release;
         };
 
         cdot {
             bindings = <&kp N>;
             key-positions = <16 17>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <10>;
             slow-release;
         };
 
         ck {
             bindings = <&kp SLASH>;
             key-positions = <17 18>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <10>;
             slow-release;
         };
     };
