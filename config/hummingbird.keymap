@@ -101,59 +101,6 @@
             bindings = <&kp SLASH>;
         };
 
-        ZCombo {
-            bindings = <&kp Z>;
-            key-positions = <26 20>;
-        };
-
-        BCombo {
-            bindings = <&kp B>;
-            key-positions = <26 22>;
-        };
-
-        DotCombo {
-            bindings = <&kp N>;
-            key-positions = <29 23>;
-        };
-
-        KCombo {
-            bindings = <&kp SLASH>;
-            key-positions = <29 25>;
-        };
-
-        ComboEsc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <26 12>;
-        };
-
-        cz {
-            bindings = <&kp Z>;
-            key-positions = <11 12>;
-            timeout-ms = <20>;
-            slow-release;
-        };
-
-        cb {
-            bindings = <&kp B>;
-            key-positions = <12 13>;
-            timeout-ms = <20>;
-            slow-release;
-        };
-
-        cdot {
-            bindings = <&kp N>;
-            key-positions = <16 17>;
-            timeout-ms = <20>;
-            slow-release;
-        };
-
-        ck {
-            bindings = <&kp SLASH>;
-            key-positions = <17 18>;
-            timeout-ms = <20>;
-            slow-release;
-        };
-
         cb_z {
             bindings = <&kp Z>;
             key-positions = <11 20>;
