@@ -96,6 +96,26 @@
             bindings = <&kp SLASH>;
             key-positions = <18 25>;
         };
+
+        cz {
+            bindings = <&kp Z>;
+            key-positions = <20 21>;
+        };
+
+        cb {
+            bindings = <&kp B>;
+            key-positions = <22 21>;
+        };
+
+        cdot {
+            bindings = <&kp N>;
+            key-positions = <23 24>;
+        };
+
+        ck {
+            bindings = <&kp SLASH>;
+            key-positions = <25 24>;
+        };
     };
 
     macros {
