@@ -116,6 +116,11 @@
             bindings = <&kp SLASH>;
             key-positions = <25 24>;
         };
+
+        studio_unlock {
+            bindings = <&studio_unlock>;
+            key-positions = <26 27 28 29>;
+        };
     };
 
     macros {
