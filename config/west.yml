@@ -10,7 +10,8 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-studio
-      url: https://github.com/zmk-studio/zmk-studio
+      url: https://github.com/zmkfirmware/zmk-studio.git
       revision: main
+      path: app/zmk-studio
   self:
     path: config
