@@ -2,8 +2,6 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: zmk-studio
-      url-base: https://github.com/KemoNine/zmk-studio
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -12,7 +10,7 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-studio
-      remote: zmk-studio
+      remote: zmkfirmware
       revision: main
   self:
     path: config
