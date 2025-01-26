@@ -1,6 +1,7 @@
 / {
     chosen {
         zephyr,console = &cdc_acm_uart0;
+        zmk,studio-rpc-uart = &cdc_acm_uart0;
     };
 };
 
