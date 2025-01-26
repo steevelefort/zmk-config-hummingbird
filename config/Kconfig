@@ -1,5 +1,0 @@
-menuconfig ZMK_STUDIO_RPC_UART
-   bool "Enable Studio RPC UART"
-   select UART_INTERRUPT_DRIVEN
-   select UART_LINE_CTRL
-   default n
