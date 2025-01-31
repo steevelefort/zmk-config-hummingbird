@@ -150,7 +150,7 @@
         egrave: egrave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&grave &kp E>;
+            bindings = <&grave &kp K>;
             label = "EGRAVE";
         };
     };
