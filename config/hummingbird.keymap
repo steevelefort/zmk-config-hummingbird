@@ -72,6 +72,15 @@
             hold-trigger-on-release;
             label = "HRL";
         };
+
+        grave: grave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE";
+            bindings = <&kp RA(R)>, <&kp RA(R)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -137,6 +146,13 @@
             bindings = <&kp LS(SPACE) &kp LS(NUMBER_3)>;
             label = "CLOSED_ANGLE_QUOTE";
         };
+
+        egrave: egrave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&egrave &kp E>;
+            label = "EGRAVE";
+        };
     };
 
     keymap {
@@ -154,10 +170,10 @@
         nav_layer {
             display-name = "Nav";
             bindings = <
-&trans  &trans  &trans             &kp RA(SEMICOLON)      &trans       &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &kp PRINTSCREEN
-&trans  &trans  &hml LCTRL ESCAPE  &hml LEFT_SHIFT LC(B)  &kp RA(T)    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPS
-        &kp Z   &trans             &kp B                                         &kp N          &trans        &kp SLASH
-                                   &trans                 &trans       &trans    &lt 2 DELETE
+&egrave  &trans  &trans             &kp RA(SEMICOLON)      &trans       &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &kp PRINTSCREEN
+&trans   &trans  &hml LCTRL ESCAPE  &hml LEFT_SHIFT LC(B)  &kp RA(T)    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPS
+         &kp Z   &trans             &kp B                                         &kp N          &trans        &kp SLASH
+                                    &trans                 &trans       &trans    &lt 2 DELETE
             >;
         };
 
