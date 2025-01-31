@@ -76,7 +76,7 @@
         grave: grave {
             compatible = "zmk,behavior-mod-morph";
             label = "GRAVE";
-            bindings = <&kp RA(R)>, <&kp RA(R)>;
+            bindings = <&kp RA(S)>, <&kp RA(S)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
