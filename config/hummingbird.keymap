@@ -202,7 +202,6 @@
             label = "EACUTE";
         };
 
-
         eflex: eflex {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -238,8 +237,6 @@
             label = "OFLEX";
         };
 
-
-
         ediaeresis: ediaeresis {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -260,9 +257,6 @@
             bindings = <&diaeresis &kp L>;
             label = "Idiaeresis";
         };
-
-
-
     };
 
     keymap {
@@ -313,6 +307,15 @@
 &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP     &mmv MOVE_RIGHT  &mkp MCLK
         &trans  &trans  &trans                            &msc SCRL_DOWN  &msc SCRL_UP     &trans
                         &trans  &trans    &mkp RCLK       &mkp LCLK
+            >;
+        };
+
+        typo {
+            bindings = <
+&aflex   &trans   &trans   &trans  &trans    &trans  &trans  &trans  &trans       &uflex
+&agrave  &eacute  &egrave  &eflex  &trans    &trans  &trans  &iflex  &idiaeresis  &ugrave
+         &trans   &trans   &trans                    &trans  &trans  &trans
+                           &trans  &trans    &trans  &trans
             >;
         };
     };
