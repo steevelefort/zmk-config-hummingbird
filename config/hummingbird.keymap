@@ -85,7 +85,7 @@
         acute: acute {
             compatible = "zmk,behavior-mod-morph";
             label = "ACUTE";
-            bindings = <&kp RA(K)>, <&kp RA(K)>;
+            bindings = <&kp RA(F)>, <&kp RA(F)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -316,6 +316,15 @@
 &agrave  &eacute  &egrave  &eflex  &trans    &trans  &trans  &iflex  &idiaeresis  &ugrave
          &trans   &trans   &trans                    &trans  &trans  &trans
                            &trans  &trans    &trans  &trans
+            >;
+        };
+
+        backup_default {
+            bindings = <
+&kp Q        &kp W        &kp E         &kp R         &kp T                &kp Y                 &kp U         &kp I            &kp O        &kp P
+&hml LGUI A  &hml RALT S  &hml LCTRL D  &hml LSHFT F  &kp G                &kp H                 &hmr RSHFT J  &hmr RCTRL K     &hmr RALT L  &hmr RGUI SEMICOLON
+             &kp X        &hml LALT C   &hrl 4 V                                                 &hrl 5 M      &hmr LALT COMMA  &kp DOT
+                                        &lt 1 SPACE   &mt RIGHT_ALT TAB    &mt LEFT_SHIFT ENTER  &lt 2 BSPC
             >;
         };
     };
