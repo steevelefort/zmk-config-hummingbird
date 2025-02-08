@@ -122,6 +122,34 @@
             bindings = <&studio_unlock>;
             key-positions = <26 27 28 29>;
         };
+
+        fast_esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <12 11>;
+            require-prior-idle-ms = <100>;
+            timeout-ms = <20>;
+        };
+
+        fast_tab {
+            bindings = <&kp TAB>;
+            key-positions = <12 13>;
+            require-prior-idle-ms = <100>;
+            timeout-ms = <20>;
+        };
+
+        fast_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <18 17>;
+            require-prior-idle-ms = <100>;
+            timeout-ms = <20>;
+        };
+
+        fast_backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <17 16>;
+            require-prior-idle-ms = <100>;
+            timeout-ms = <20>;
+        };
     };
 
     macros {
