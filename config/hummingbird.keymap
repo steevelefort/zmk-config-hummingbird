@@ -171,6 +171,40 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        td_typo: td_typo {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_TYPO";
+            #binding-cells = <0>;
+            bindings = <&typo 2 5>, <&diaeresis>;
+        };
+
+        typo1dk: typo1dk {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TYPO1DK";
+            bindings = <&td_typo>, <&kp EXCLAMATION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        dot: dot {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT";
+            bindings = <&kp DOT>, <&kt COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        comma: comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA";
+            bindings = <&kp COMMA>, <&kt SEMICOLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -237,14 +271,14 @@
 
         fast_enter {
             bindings = <&kp ENTER>;
-            key-positions = <18 17>;
+            key-positions = <17 16>;
             require-prior-idle-ms = <100>;
             timeout-ms = <15>;
         };
 
         fast_backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <17 16>;
+            key-positions = <17 18>;
             require-prior-idle-ms = <100>;
             timeout-ms = <15>;
         };
@@ -371,10 +405,10 @@
 
         default_layer {
             bindings = <
-&kp Q        &kp C             &kp SEMICOLON  &kp R           &kp W                &kp Y                 &kp M           &kp G         &kp O        &kp E
-&hml LGUI A  &hmlt 4 D         &hml LCTRL K   &f_hml LSHFT J  &kp B                &kp U                 &f_hmr RSHFT S  &hmr RCTRL F  &hmrt 4 L    &hmr RGUI I
-             &hml RIGHT_ALT X  &hml LALT Z    &hrl 6 V                                                   &kp H           &hmr LALT T   &hmr RALT N
-                                              &lt 1 SPACE     &mt RIGHT_ALT TAB    &mt LEFT_SHIFT ENTER  &typo 2 5
+&kp Q        &kp C             &kp SEMICOLON  &kp R           &kp W     &kp Y  &kp M           &kp G         &kp O        &kp E
+&hml LGUI A  &hmlt 4 D         &hml LCTRL K   &f_hml LSHFT J  &kp B     &kp U  &f_hmr RSHFT S  &hmr RCTRL F  &hmrt 4 L    &hmr RGUI I
+             &hml RIGHT_ALT X  &hml LALT Z    &hrl 6 V                         &kp H           &hmr LALT T   &hmr RALT N
+                                              &lt 1 SPACE     &comma    &dot   &typo1dk
             >;
         };
 
@@ -419,10 +453,10 @@
 
         typo {
             bindings = <
-&aflex  &kp RA(C)  &kp RA(V)  &oflex  &trans    &trans                &trans                 &kp UNDERSCORE  &trans       &uflex
-&acute  &eacute    &egrave    &eflex  &trans    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &iflex          &idiaeresis  &ugrave
-        &kp RA(Z)  &trans     &trans                                  &trans                 &trans          &trans
-                              &trans  &trans    &trans                &trans
+&aflex   &kp RA(C)  &kp RA(V)     &oflex  &trans    &trans                &kp MINUS              &kp UNDERSCORE  &trans       &uflex
+&agrave  &kp RA(E)  &egrave       &eflex  &trans    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &iflex          &idiaeresis  &ugrave
+         &kp RA(Z)  &kp QUESTION  &trans                                  &trans                 &trans          &trans
+                                  &trans  &trans    &trans                &trans
             >;
         };
 
