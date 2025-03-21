@@ -100,6 +100,42 @@
             hold-trigger-on-release;
             label = "F_HMR";
         };
+ grave: grave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE";
+            bindings = <&kp RA(S)>, <&kp RA(S)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        acute: acute {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ACUTE";
+            bindings = <&kp RA(F)>, <&kp RA(F)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        flex: flex {
+            compatible = "zmk,behavior-mod-morph";
+            label = "FLEX";
+            bindings = <&kp RA(X)>, <&kp RA(X)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        diaeresis: diaeresis {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DIAERESIS";
+            bindings = <&kp RA(G)>, <&kp RA(G)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
     };
 
     combos {
@@ -209,6 +245,91 @@
             bindings = <&kp LS(SPACE) &kp LS(NUMBER_3)>;
             label = "CLOSED_ANGLE_QUOTE";
         };
+        egrave: egrave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&grave &kp K>;
+            label = "EGRAVE";
+        };
+
+        agrave: agrave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&grave &kp A>;
+            label = "AGRAVE";
+        };
+
+        ugrave: ugrave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&grave &kp I>;
+            label = "UGRAVE";
+        };
+
+        eacute: eacute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&acute &kp I>;
+            label = "EACUTE";
+        };
+
+        eflex: eflex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&flex &kp K>;
+            label = "EFLEX";
+        };
+
+        aflex: aflex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&flex &kp A>;
+            label = "AFLEX";
+        };
+
+        uflex: uflex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&flex &kp I>;
+            label = "UFLEX";
+        };
+
+        iflex: iflex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&flex &kp L>;
+            label = "IFLEX";
+        };
+
+        oflex: oflex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&flex &kp SEMICOLON>;
+            label = "OFLEX";
+        };
+
+        ediaeresis: ediaeresis {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&diaeresis &kp K>;
+            label = "Ediaeresis";
+        };
+
+        udiaeresis: udiaeresis {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&diaeresis &kp I>;
+            label = "Udiaeresis";
+        };
+
+        idiaeresis: idiaeresis {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&diaeresis &kp L>;
+            label = "Idiaeresis";
+        };
+
+
     };
 
     keymap {
