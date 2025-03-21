@@ -136,6 +136,41 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        hmlt: hmlt {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <5 6 7 8 9 19 18 17 16 15 23 24 25 29 28 27 26>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            label = "HMLT";
+            bindings = <&mo>, <&kp>;
+        };
+
+        hmrt: hmrt {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <4 3 2 1 0 10 11 12 13 14 22 21 20 26 27 28 29>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            label = "HMRT";
+            bindings = <&mo>, <&kp>;
+        };
+
+        typo: typo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TYPO";
+            bindings = <&mo>, <&sl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     combos {
@@ -336,10 +371,10 @@
 
         default_layer {
             bindings = <
-&kp Q        &kp C        &kp SEMICOLON  &kp R           &kp W                &kp Y                 &kp M           &kp G         &kp O        &kp P
-&hml LGUI A  &hml RALT D  &hml LCTRL K   &f_hml LSHFT J  &kp B                &kp U                 &f_hmr RSHFT S  &hmr RCTRL F  &hmr RALT L  &hmr RGUI I
-             &kp X        &hml LALT Z    &hrl 4 V                                                   &kp H           &hmr LALT T   &kp N
-                                         &lt 1 SPACE     &mt RIGHT_ALT TAB    &mt LEFT_SHIFT ENTER  &lt 2 BSPC
+&kp Q        &kp C             &kp SEMICOLON  &kp R           &kp W                &kp Y                 &kp M           &kp G         &kp O        &kp E
+&hml LGUI A  &hmlt 4 D         &hml LCTRL K   &f_hml LSHFT J  &kp B                &kp U                 &f_hmr RSHFT S  &hmr RCTRL F  &hmrt 4 L    &hmr RGUI I
+             &hml RIGHT_ALT X  &hml LALT Z    &hrl 6 V                                                   &kp H           &hmr LALT T   &hmr RALT N
+                                              &lt 1 SPACE     &mt RIGHT_ALT TAB    &mt LEFT_SHIFT ENTER  &typo 2 5
             >;
         };
 
@@ -356,10 +391,10 @@
         num_layer {
             display-name = "NUMERIC";
             bindings = <
-&kp F1  &kp F2      &kp F3        &kp F4               &kp F5     &kp F6   &kp F7   &kp F8        &kp F9  &kp F10
-&kp N1  &kp N2      &kp N3        &kp N4               &kp N5     &kp N6   &kp N7   &kp N8        &kp N9  &kp N0
-        &kp LS(N1)  &hroa LALT 0  &closed_angle_quote                      &kp N8   &hmr LALT N9  &kp N0
-                                  &lt 1 F11            &kp F12    &kp F11  &kp F12
+&kp F1  &kp F2      &kp F3                    &kp F4                 &kp F5     &kp F6   &kp F7   &kp F8        &kp F9  &kp F10
+&kp N1  &kp N2      &kp N3                    &kp N4                 &kp N5     &kp N6   &kp N7   &kp N8        &kp N9  &kp N0
+        &kp RA(N1)  &hroa RA(LEFT_BRACKET) 0  &kp RA(RIGHT_BRACKET)                      &kp N8   &hmr LALT N9  &kp N0
+                                              &lt 1 F11              &kp F12    &kp F11  &kp F12
             >;
         };
 
@@ -370,6 +405,24 @@
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &trans
               &trans        &trans        &trans                                &trans             &trans      &trans
                                           &trans        &trans          &trans  &trans
+            >;
+        };
+
+        AltGr {
+            bindings = <
+&kp CARET       &kp LESS_THAN         &kp GREATER_THAN       &kp DOLLAR         &kp PERCENT    &kp AT_SIGN           &kp AMPERSAND  &kp ASTERISK   &kp SQT    &kp GRAVE
+&kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE    &kp EQUAL      &kp NON_US_BACKSLASH  &kp PLUS       &kp MINUS      &kp SLASH  &kp DOUBLE_QUOTES
+                &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp HASH                                                &kp PIPE       &kp SEMICOLON  &kp COLON
+                                                             &kp LS(RA(SPACE))  &trans         &trans                &trans
+            >;
+        };
+
+        typo {
+            bindings = <
+&aflex  &kp RA(C)  &kp RA(V)  &oflex  &trans    &trans                &trans                 &kp UNDERSCORE  &trans       &uflex
+&acute  &eacute    &egrave    &eflex  &trans    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &iflex          &idiaeresis  &ugrave
+        &kp RA(Z)  &trans     &trans                                  &trans                 &trans          &trans
+                              &trans  &trans    &trans                &trans
             >;
         };
 
