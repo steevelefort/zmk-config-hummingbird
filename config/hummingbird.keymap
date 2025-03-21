@@ -100,7 +100,8 @@
             hold-trigger-on-release;
             label = "F_HMR";
         };
- grave: grave {
+
+        grave: grave {
             compatible = "zmk,behavior-mod-morph";
             label = "GRAVE";
             bindings = <&kp RA(S)>, <&kp RA(S)>;
@@ -135,7 +136,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
     };
 
     combos {
@@ -245,6 +245,7 @@
             bindings = <&kp LS(SPACE) &kp LS(NUMBER_3)>;
             label = "CLOSED_ANGLE_QUOTE";
         };
+
         egrave: egrave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -328,8 +329,6 @@
             bindings = <&diaeresis &kp L>;
             label = "Idiaeresis";
         };
-
-
     };
 
     keymap {
@@ -337,10 +336,10 @@
 
         default_layer {
             bindings = <
-&kp Q        &kp W        &kp E         &kp R           &kp T                &kp Y                 &kp U           &kp I            &kp O        &kp P
-&hml LGUI A  &hml RALT S  &hml LCTRL D  &f_hml LSHFT F  &kp G                &kp H                 &f_hmr RSHFT J  &hmr RCTRL K     &hmr RALT L  &hmr RGUI SEMICOLON
-             &kp X        &hml LALT C   &hrl 4 V                                                   &kp M           &hmr LALT COMMA  &kp DOT
-                                        &lt 1 SPACE     &mt RIGHT_ALT TAB    &mt LEFT_SHIFT ENTER  &lt 2 BSPC
+&kp Q        &kp C        &kp SEMICOLON  &kp R           &kp W                &kp Y                 &kp M           &kp G         &kp O        &kp P
+&hml LGUI A  &hml RALT D  &hml LCTRL K   &f_hml LSHFT J  &kp B                &kp U                 &f_hmr RSHFT S  &hmr RCTRL F  &hmr RALT L  &hmr RGUI I
+             &kp X        &hml LALT Z    &hrl 4 V                                                   &kp H           &hmr LALT T   &kp N
+                                         &lt 1 SPACE     &mt RIGHT_ALT TAB    &mt LEFT_SHIFT ENTER  &lt 2 BSPC
             >;
         };
 
