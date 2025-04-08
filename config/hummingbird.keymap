@@ -100,6 +100,15 @@
             hold-trigger-on-release;
             label = "F_HMR";
         };
+
+        modsk: modsk {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MODSK";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
     };
 
     combos {
@@ -123,26 +132,6 @@
         cb_k {
             bindings = <&kp SLASH>;
             key-positions = <18 25>;
-        };
-
-        cz {
-            bindings = <&kp Z>;
-            key-positions = <20 21>;
-        };
-
-        cb {
-            bindings = <&kp B>;
-            key-positions = <22 21>;
-        };
-
-        cdot {
-            bindings = <&kp N>;
-            key-positions = <23 24>;
-        };
-
-        ck {
-            bindings = <&kp SLASH>;
-            key-positions = <25 24>;
         };
 
         studio_unlock {
@@ -179,12 +168,12 @@
         };
 
         AltGr {
-            bindings = <&sk RIGHT_ALT>;
+            bindings = <&modsk RIGHT_ALT RIGHT_ALT>;
             key-positions = <26 27>;
         };
 
         Shift {
-            bindings = <&sk LEFT_SHIFT>;
+            bindings = <&modsk LEFT_SHIFT LEFT_SHIFT>;
             key-positions = <28 29>;
         };
 
