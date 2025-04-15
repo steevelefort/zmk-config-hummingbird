@@ -193,6 +193,26 @@
             key-positions = <11 12 13>;
             layers = <3>;
         };
+
+        ct_z {
+            bindings = <&kp Z>;
+            key-positions = <20 26>;
+        };
+
+        ct_b {
+            bindings = <&kp B>;
+            key-positions = <26 22>;
+        };
+
+        ct_dot {
+            bindings = <&kp N>;
+            key-positions = <23 29>;
+        };
+
+        ct_k {
+            bindings = <&kp SLASH>;
+            key-positions = <29 25>;
+        };
     };
 
     macros {
