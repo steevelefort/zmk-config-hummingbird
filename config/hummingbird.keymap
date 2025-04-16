@@ -196,22 +196,22 @@
 
         ct_z {
             bindings = <&kp Z>;
-            key-positions = <20 26>;
+            key-positions = <26 11>;
         };
 
         ct_b {
             bindings = <&kp B>;
-            key-positions = <26 22>;
+            key-positions = <26 13>;
         };
 
         ct_dot {
             bindings = <&kp N>;
-            key-positions = <23 29>;
+            key-positions = <29 16>;
         };
 
         ct_k {
             bindings = <&kp SLASH>;
-            key-positions = <29 25>;
+            key-positions = <29 18>;
         };
     };
 
