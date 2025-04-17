@@ -238,6 +238,20 @@
             bindings = <&kp LS(SPACE) &kp LS(NUMBER_3)>;
             label = "CLOSED_ANGLE_QUOTE";
         };
+
+        tmux_H: tmux_H {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp RA(T)>;
+            label = "TMUX_H";
+        };
+
+        tmux_V: tmux_V {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp RA(SEMICOLON)>;
+            label = "TMUX_V";
+        };
     };
 
     keymap {
@@ -255,10 +269,10 @@
         nav_layer {
             display-name = "Nav";
             bindings = <
-&trans  &trans  &trans             &kp RA(SEMICOLON)      &trans       &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &kp PRINTSCREEN
-&trans  &trans  &hml LCTRL ESCAPE  &hml LEFT_SHIFT LC(B)  &kp RA(T)    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPS
-        &kp Z   &trans             &kp B                                         &kp N          &trans        &kp SLASH
-                                   &trans                 &trans       &trans    &lt 2 DELETE
+&trans  &kp RA(X)  &trans             &kp RA(C)              &kp RA(T)            &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &kp PRINTSCREEN
+&trans  &trans     &hml LCTRL ESCAPE  &hml LEFT_SHIFT LC(B)  &kp RA(SEMICOLON)    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPS
+        &kp Z      &trans             &kp B                                                 &kp N          &trans        &kp SLASH
+                                      &trans                 &trans               &trans    &lt 2 DELETE
             >;
         };
 
