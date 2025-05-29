@@ -165,6 +165,7 @@
             key-positions = <17 16>;
             require-prior-idle-ms = <100>;
             timeout-ms = <15>;
+            layers = <0>;
         };
 
         AltGr {
@@ -201,6 +202,14 @@
         ct_k {
             bindings = <&kp SLASH>;
             key-positions = <29 18>;
+        };
+
+        c_del {
+            bindings = <&kp DELETE>;
+            key-positions = <16 17>;
+            layers = <1>;
+            timeout-ms = <15>;
+            require-prior-idle-ms = <100>;
         };
     };
 
