@@ -114,33 +114,13 @@
     combos {
         compatible = "zmk,combos";
 
-        cb_z {
-            bindings = <&kp Z>;
-            key-positions = <11 20>;
-        };
-
-        cb_b {
-            bindings = <&kp B>;
-            key-positions = <13 22>;
-        };
-
-        cb_dot {
-            bindings = <&kp N>;
-            key-positions = <16 23>;
-        };
-
-        cb_k {
-            bindings = <&kp SLASH>;
-            key-positions = <18 25>;
-        };
-
         cz {
             bindings = <&kp Z>;
             key-positions = <20 21>;
         };
 
         cb {
-            bindings = <&kp B>;
+            bindings = <&kp C>;
             key-positions = <22 21>;
         };
 
