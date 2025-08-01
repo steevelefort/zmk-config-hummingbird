@@ -116,22 +116,22 @@
 
         cb_z {
             bindings = <&kp Z>;
-            key-positions = <11 20>;
+            key-positions = <0 10>;
         };
 
         cb_b {
             bindings = <&kp B>;
-            key-positions = <13 22>;
+            key-positions = <14 4>;
         };
 
         cb_dot {
             bindings = <&kp N>;
-            key-positions = <16 23>;
+            key-positions = <15 5>;
         };
 
         cb_k {
             bindings = <&kp SLASH>;
-            key-positions = <18 25>;
+            key-positions = <9 19>;
         };
 
         cz {
@@ -249,10 +249,10 @@
         nav_layer {
             display-name = "Nav";
             bindings = <
-&trans  &kp RA(X)  &trans             &kp RA(C)              &kp RA(T)            &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &kp PRINTSCREEN
-&trans  &trans     &hml LCTRL ESCAPE  &hml LEFT_SHIFT LC(B)  &kp RA(SEMICOLON)    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPS
-        &kp Z      &trans             &kp B                                                 &kp N          &trans        &kp SLASH
-                                      &trans                 &trans               &trans    &lt 2 DELETE
+&trans  &kp RA(X)  &kp Z              &kp RA(C)              &kp LC(T)    &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &kp PRINTSCREEN
+&trans  &trans     &hml LCTRL ESCAPE  &hml LEFT_SHIFT LC(B)  &kp RA(T)    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPS
+        &trans     &trans             &kp RA(SEMICOLON)                             &trans         &trans        &trans
+                                      &trans                 &trans       &trans    &lt 2 DELETE
             >;
         };
 
