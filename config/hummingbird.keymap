@@ -116,22 +116,22 @@
 
         cb_z {
             bindings = <&kp Z>;
-            key-positions = <0 10>;
+            key-positions = <11 20>;
         };
 
         cb_b {
             bindings = <&kp B>;
-            key-positions = <14 4>;
+            key-positions = <13 22>;
         };
 
         cb_dot {
             bindings = <&kp N>;
-            key-positions = <15 5>;
+            key-positions = <16 23>;
         };
 
         cb_k {
             bindings = <&kp SLASH>;
-            key-positions = <9 19>;
+            key-positions = <18 25>;
         };
 
         cz {
