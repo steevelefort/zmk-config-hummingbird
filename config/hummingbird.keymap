@@ -232,6 +232,42 @@
             bindings = <&kp LC(B) &kp RA(SEMICOLON)>;
             label = "TMUX_V";
         };
+
+        Vim_change_window: Vim_change_window {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(T) &kp T>;
+            label = "VIM_CHANGE_WINDOW";
+        };
+
+        vim_reduce_x: vim_reduce_x {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(T) &kp RA(W)>;
+            label = "VIM_REDUCE_X";
+        };
+
+        vim_increase_x: vim_increase_x {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(T) &kp RA(E)>;
+            label = "VIM_INCREASE_X";
+        };
+
+        vim_decrease_y: vim_decrease_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(T) &kp RA(K)>;
+            label = "VIM_DECREASE_Y";
+        };
+
+        vim_increase_y: vim_increase_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(T) &kp RA(J)>;
+            label = "VIM_INCREASE_Y";
+        };
+
     };
 
     keymap {
