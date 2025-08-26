@@ -267,7 +267,6 @@
             bindings = <&kp LC(T) &kp RA(J)>;
             label = "VIM_INCREASE_Y";
         };
-
     };
 
     keymap {
@@ -285,10 +284,10 @@
         nav_layer {
             display-name = "Nav";
             bindings = <
-&trans  &kp RA(X)  &kp Z              &kp RA(C)              &kp LC(T)    &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &kp PRINTSCREEN
-&trans  &trans     &hml LCTRL ESCAPE  &hml LEFT_SHIFT LC(B)  &kp RA(T)    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPS
-        &trans     &trans             &kp RA(SEMICOLON)                             &kp N          &trans        &kp SLASH
-                                      &trans                 &trans       &trans    &lt 2 DELETE
+&vim_increase_y  &kp RA(X)        &kp Z              &kp RA(C)              &kp LC(T)    &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &kp PRINTSCREEN
+&vim_reduce_x    &vim_increase_x  &hml LCTRL ESCAPE  &hml LEFT_SHIFT LC(B)  &kp RA(T)    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPS
+                 &vim_decrease_y  &trans             &kp RA(SEMICOLON)                             &kp N          &trans        &kp SLASH
+                                                     &trans                 &trans       &trans    &lt 2 DELETE
             >;
         };
 
