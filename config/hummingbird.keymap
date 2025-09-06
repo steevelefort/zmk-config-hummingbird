@@ -275,7 +275,7 @@
         default_layer {
             bindings = <
 &kp Q        &kp W        &kp E         &kp R           &kp T                &kp Y                 &kp U           &kp I            &kp O        &kp P
-&hml LGUI A  &hml RALT S  &hml LCTRL D  &f_hml LSHFT F  &kp G                &kp H                 &f_hmr RSHFT J  &hmr RCTRL K     &hmr RALT L  &hmr RGUI SEMICOLON
+&hml LGUI A  &hml RALT S  &hml LCTRL D  &f_hml LSHFT F  &lt 5 G              &kp H                 &f_hmr RSHFT J  &hmr RCTRL K     &hmr RALT L  &hmr RGUI SEMICOLON
              &kp X        &hml LALT C   &hrl 4 V                                                   &kp M           &hmr LALT COMMA  &kp DOT
                                         &lt 1 SPACE     &mt RIGHT_ALT TAB    &mt LEFT_SHIFT ENTER  &lt 2 BSPC
             >;
@@ -317,6 +317,15 @@
 &trans  &trans  &trans  &trans  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP     &mmv MOVE_RIGHT  &mkp MCLK
         &trans  &trans  &trans                            &msc SCRL_DOWN  &msc SCRL_UP     &trans
                         &trans  &trans    &mkp RCLK       &mkp LCLK
+            >;
+        };
+
+        Numpad {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &kp N7        &kp N8        &kp N9        &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans
+        &trans  &trans  &trans                    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
+                        &trans  &trans    &trans  &kp N0
             >;
         };
     };
