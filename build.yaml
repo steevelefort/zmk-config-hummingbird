@@ -19,10 +19,10 @@
 #
 ---
 include:
-  - board: seeeduino_xiao_rp2040
+  - board: xiao_rp2040
     shield: hummingbird
     snippet: studio-rpc-usb-uart
 #    cmake-args: -DCONFIG_ZMK_STUDIO=y
 #    artifact-name: hummingbird_with_studio
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble
     shield: hummingbird
