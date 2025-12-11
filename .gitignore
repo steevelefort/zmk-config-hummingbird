@@ -1,0 +1,14 @@
+# Build artifacts
+build/
+*.uf2
+
+# ZMK artifacts
+.west/
+modules/
+tools/
+zephyr/
+
+# OS files
+.DS_Store
+Thumbs.db
+zmk-workspace/
