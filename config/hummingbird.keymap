@@ -26,9 +26,8 @@
             quick-tap-ms = <175>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-
             hold-trigger-key-positions = <5 6 7 8 9 19 18 17 16 15 23 24 25 29 28 27 26>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <200>; // 150 before
             hold-trigger-on-release;
         };
 
@@ -39,9 +38,8 @@
             quick-tap-ms = <175>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-
             hold-trigger-key-positions = <4 3 2 1 0 10 11 12 13 14 22 21 20 26 27 28 29>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <200>; // 150 before
             hold-trigger-on-release;
         };
 
@@ -52,7 +50,6 @@
             quick-tap-ms = <150>;
             #binding-cells = <2>;
             bindings = <&kp>, <&open_angle_quote>;
-
             hold-trigger-key-positions = <5 6 7 8 9 19 18 17 16 15 23 24 25 29 28 27 26>;
             require-prior-idle-ms = <100>;
             hold-trigger-on-release;
@@ -66,9 +63,8 @@
             quick-tap-ms = <175>;
             #binding-cells = <2>;
             bindings = <&mo>, <&kp>;
-
             hold-trigger-key-positions = <5 6 7 8 9 19 18 17 16 15 23 24 25 29 28 27 26>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <200>; // 150 before
             hold-trigger-on-release;
             label = "HRL";
         };
@@ -80,7 +76,6 @@
             quick-tap-ms = <150>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-
             hold-trigger-key-positions = <5 6 7 8 9 19 18 17 16 15 23 24 25 29 28 27 26>;
             require-prior-idle-ms = <100>;
             hold-trigger-on-release;
@@ -94,7 +89,6 @@
             quick-tap-ms = <150>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-
             hold-trigger-key-positions = <4 3 2 1 0 10 11 12 13 14 22 21 20 26 27 28 29>;
             require-prior-idle-ms = <100>;
             hold-trigger-on-release;
@@ -106,7 +100,6 @@
             label = "CAPS_ENTER";
             #binding-cells = <0>;
             bindings = <&mt LEFT_SHIFT ENTER>, <&kp CAPSLOCK>;
-
             tapping-term-ms = <200>;
         };
     };
@@ -162,28 +155,28 @@
         fast_esc {
             bindings = <&kp ESCAPE>;
             key-positions = <12 11>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <200>; // 150 before
             timeout-ms = <15>;
         };
 
         fast_tab {
             bindings = <&kp TAB>;
             key-positions = <12 13>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <200>; // 150 before
             timeout-ms = <15>;
         };
 
         fast_enter {
             bindings = <&kp ENTER>;
             key-positions = <18 17>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <200>; // 150 before
             timeout-ms = <15>;
         };
 
         fast_backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <17 16>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <200>; // 150 before
             timeout-ms = <15>;
         };
 
@@ -277,7 +270,7 @@
 &kp Q        &kp W        &kp E         &kp R           &kp T                &kp Y                 &kp U           &kp I            &kp O        &kp P
 &hml LGUI A  &hml RALT S  &hml LCTRL D  &f_hml LSHFT F  &lt 5 G              &kp H                 &f_hmr RSHFT J  &hmr RCTRL K     &hmr RALT L  &hmr RGUI SEMICOLON
              &kp X        &hml LALT C   &hrl 4 V                                                   &kp M           &hmr LALT COMMA  &kp DOT
-                                        &lt 1 SPACE     &mt RIGHT_ALT TAB    &mt LEFT_SHIFT ENTER  &lt 2 BSPC
+                                        &lt 1 SPACE     &mt LEFT_SHIFT TAB    &mt RIGHT_ALT ENTER  &lt 2 BSPC
             >;
         };
 
