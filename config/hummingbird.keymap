@@ -109,6 +109,35 @@
 
             tapping-term-ms = <200>;
         };
+
+        cal_l: cal_l {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&sk>;
+
+            hold-trigger-key-positions = <5 6 7 8 9 19 18 17 16 15 23 24 25 29 28 27 26>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            label = "CAL_L";
+        };
+
+        cal_r: cal_r {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&sk>;
+
+            hold-trigger-key-positions = <4 3 2 1 0 10 11 12 13 14 22 21 20 26 27 28 29>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            label = "CAL_R";
+        };
+
     };
 
     combos {
@@ -341,6 +370,25 @@
                         &trans  &trans    &mkp RCLK       &mkp LCLK
             >;
         };
+
+        CallumRight {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans                        &trans                            &trans                      &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &cal_r LEFT_SHIFT LEFT_SHIFT  &cal_r LEFT_CONTROL LEFT_CONTROL  &cal_r RIGHT_ALT RIGHT_ALT  &cal_r LEFT_GUI LEFT_GUI
+        &trans  &trans  &trans                    &trans                        &trans                            &trans
+                        &trans  &trans    &trans  &trans
+            >;
+        };
+
+        CallumLeft {
+            bindings = <
+&trans                    &trans                      &trans                     &trans                        &trans    &trans  &trans  &trans  &trans  &trans
+&cal_l LEFT_GUI LEFT_GUI  &cal_l RIGHT_ALT RIGHT_ALT  &cal_l LCTRL LEFT_CONTROL  &cal_l LEFT_SHIFT LEFT_SHIFT  &trans    &trans  &trans  &trans  &trans  &trans
+                          &trans                      &trans                     &trans                                  &trans  &trans  &trans  &trans
+                                                                                 &trans                        &trans    &trans  &trans
+            >;
+        };
+
     };
 
     conditional_layers {
