@@ -310,7 +310,8 @@
 &kp Q        &kp W        &kp E         &kp R           &kp T                 &kp Y                &kp U           &kp I            &kp O        &kp P
 &hml LGUI A  &hml RALT S  &hml LCTRL D  &f_hml LSHFT F  &hrl 6 G              &kp H                &f_hmr RSHFT J  &hmr RCTRL K     &hmr RALT L  &hmr RGUI SEMICOLON
              &kp X        &hml LALT C   &hrl 4 V                                                   &kp M           &hmr LALT COMMA  &kp DOT
-                                        &lt 1 SPACE     &mt LEFT_SHIFT TAB    &mt RIGHT_ALT ENTER  &lt 2 BSPC
+                                        // &lt 1 SPACE     &mt LEFT_SHIFT TAB    &mt RIGHT_ALT ENTER  &lt 2 BSPC
+                                        &lt 1 SPACE     &lt 7 TAB    &lt 6 ENTER  &lt 2 BSPC
             >;
         };
 
@@ -318,7 +319,7 @@
             display-name = "Nav";
             bindings = <
 &trans  &trans  &trans             &trans  &trans    &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &kp PRINTSCREEN
-&trans  &trans  &hml LCTRL ESCAPE  &trans  &trans    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPS
+&cal_l LEFT_GUI LEFT_GUI  &cal_l RIGHT_ALT RIGHT_ALT  &hml LCTRL ESCAPE  &cal_l LEFT_SHIFT LEFT_SHIFT  &trans    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPS
         &trans  &trans             &trans                      &kp N          &trans        &kp SLASH
                                    &trans  &trans    &trans    &lt 2 DELETE
             >;
