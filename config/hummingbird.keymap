@@ -15,7 +15,6 @@
 #define SYM_L 3
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 800  // default: 600
 
-// Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 
 / {
     behaviors {
