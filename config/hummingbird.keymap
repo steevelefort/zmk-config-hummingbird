@@ -45,20 +45,6 @@
             hold-trigger-on-release;
         };
 
-        hroa: hroa {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&open_angle_quote>;
-
-            hold-trigger-key-positions = <5 6 7 8 9 19 18 17 16 15 23 24 25 29 28 27 26>;
-            require-prior-idle-ms = <100>;
-            hold-trigger-on-release;
-            label = "HROA";
-        };
-
         hrl: hrl {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -101,42 +87,6 @@
             label = "F_HMR";
         };
 
-        caps_enter: caps_enter {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CAPS_ENTER";
-            #binding-cells = <0>;
-            bindings = <&mt LEFT_SHIFT ENTER>, <&kp CAPSLOCK>;
-
-            tapping-term-ms = <200>;
-        };
-
-        cal_l: cal_l {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&sk>;
-
-            hold-trigger-key-positions = <5 6 7 8 9 19 18 17 16 15 23 24 25 29 28 27 26>;
-            require-prior-idle-ms = <150>;
-            hold-trigger-on-release;
-            label = "CAL_L";
-        };
-
-        cal_r: cal_r {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&sk>;
-
-            hold-trigger-key-positions = <4 3 2 1 0 10 11 12 13 14 22 21 20 26 27 28 29>;
-            require-prior-idle-ms = <150>;
-            hold-trigger-on-release;
-            label = "CAL_R";
-        };
     };
 
     combos {
@@ -236,71 +186,6 @@
         };
     };
 
-    macros {
-        open_angle_quote: open_angle_quote {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(NUMBER_2) &kp LS(SPACE)>;
-            label = "OPEN_ANGLE_QUOTE";
-        };
-
-        closed_angle_quote: closed_angle_quote {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(SPACE) &kp LS(NUMBER_3)>;
-            label = "CLOSED_ANGLE_QUOTE";
-        };
-
-        tmux_H: tmux_H {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp RA(T)>;
-            label = "TMUX_H";
-        };
-
-        tmux_V: tmux_V {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp RA(SEMICOLON)>;
-            label = "TMUX_V";
-        };
-
-        Vim_change_window: Vim_change_window {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(T) &kp T>;
-            label = "VIM_CHANGE_WINDOW";
-        };
-
-        vim_reduce_x: vim_reduce_x {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(T) &kp RA(W)>;
-            label = "VIM_REDUCE_X";
-        };
-
-        vim_increase_x: vim_increase_x {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(T) &kp RA(E)>;
-            label = "VIM_INCREASE_X";
-        };
-
-        vim_decrease_y: vim_decrease_y {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(T) &kp RA(K)>;
-            label = "VIM_DECREASE_Y";
-        };
-
-        vim_increase_y: vim_increase_y {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(T) &kp RA(J)>;
-            label = "VIM_INCREASE_Y";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -370,23 +255,6 @@
             >;
         };
 
-        CallumRight {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans                        &trans                            &trans                      &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &cal_r LEFT_SHIFT LEFT_SHIFT  &cal_r LEFT_CONTROL LEFT_CONTROL  &cal_r RIGHT_ALT RIGHT_ALT  &cal_r LEFT_GUI LEFT_GUI
-        &trans  &trans  &trans                    &trans                        &trans                            &trans
-                        &trans  &trans    &trans  &trans
-            >;
-        };
-
-        CallumLeft {
-            bindings = <
-&trans                    &trans                      &trans                     &trans                        &trans    &trans  &trans  &trans  &trans  &trans
-&cal_l LEFT_GUI LEFT_GUI  &cal_l RIGHT_ALT RIGHT_ALT  &cal_l LCTRL LEFT_CONTROL  &cal_l LEFT_SHIFT LEFT_SHIFT  &trans    &trans  &trans  &trans  &trans  &trans
-                          &trans                      &trans                     &trans                                          &trans  &trans  &trans
-                                                                                 &trans                        &trans    &trans  &trans
-            >;
-        };
     };
 
     conditional_layers {
