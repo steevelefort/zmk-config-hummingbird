@@ -305,7 +305,7 @@
         default_layer {
             bindings = <
 &kp Q        &kp C        &kp O               &kp P           &kp W                 &kp J           &kp M           &kp D         &kp O        &kp Y
-&hml LGUI A  &hml RALT S  &hml LCTRL E        &f_hml LSHFT N  &hrl 6 F              &kp L           &f_hmr RSHFT R  &hmr RCTRL T  &hmr RALT I  &hmr RGUI U
+&hml LGUI A  &hml RALT S  &hml LCTRL E        &f_hml LSHFT N  &hrl 0 F              &kp L           &f_hmr RSHFT R  &hmr RCTRL T  &hmr RALT I  &hmr RGUI U
              &kp X        &hml LALT QUESTION  &hrl 4 V                                              &kp H           &hmr LALT G   &kp COMMA
                                               &lt 1 SPACE     &mt LEFT_SHIFT TAB    &mt RALT ENTER  &lt 2 BSPC
             >;
@@ -350,21 +350,21 @@
             >;
         };
 
-        Numpad {
+        AltGr {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &kp N7        &kp N8        &kp N9        &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans
-        &trans  &trans  &trans                    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
-                        &trans  &trans    &trans  &kp N0
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans                    &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
 
-        MouseAlt {
+        Typo {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MCLK
-        &trans  &trans  &trans                            &trans          &trans          &trans
-                        &trans  &trans    &mkp RCLK       &mkp LCLK
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans                    &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
     };
