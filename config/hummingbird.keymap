@@ -316,7 +316,7 @@
             bindings = <
 &trans                    &trans                      &trans             &trans                        &trans    &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &kp PRINTSCREEN
 &cal_l LEFT_GUI LEFT_GUI  &cal_l RIGHT_ALT RIGHT_ALT  &hml LCTRL ESCAPE  &cal_l LEFT_SHIFT LEFT_SHIFT  &trans    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPS
-                          &trans                      &trans             &trans                                            &kp N          &trans        &kp SLASH
+                          &trans                      &trans             &trans                                            &kp PERIOD     &trans        &kp K
                                                                          &trans                        &trans    &trans    &lt 2 DELETE
             >;
         };
@@ -365,24 +365,6 @@
 &trans  &trans  &trans  &trans  &trans    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MCLK
         &trans  &trans  &trans                            &trans          &trans          &trans
                         &trans  &trans    &mkp RCLK       &mkp LCLK
-            >;
-        };
-
-        CallumRight {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans                        &trans                            &trans                      &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &cal_r LEFT_SHIFT LEFT_SHIFT  &cal_r LEFT_CONTROL LEFT_CONTROL  &cal_r RIGHT_ALT RIGHT_ALT  &cal_r LEFT_GUI LEFT_GUI
-        &trans  &trans  &trans                    &trans                        &trans                            &trans
-                        &trans  &trans    &trans  &trans
-            >;
-        };
-
-        CallumLeft {
-            bindings = <
-&trans                    &trans                      &trans                     &trans                        &trans    &trans  &trans  &trans  &trans  &trans
-&cal_l LEFT_GUI LEFT_GUI  &cal_l RIGHT_ALT RIGHT_ALT  &cal_l LCTRL LEFT_CONTROL  &cal_l LEFT_SHIFT LEFT_SHIFT  &trans    &trans  &trans  &trans  &trans  &trans
-                          &trans                      &trans                     &trans                                          &trans  &trans  &trans
-                                                                                 &trans                        &trans    &trans  &trans
             >;
         };
     };
