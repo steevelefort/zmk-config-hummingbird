@@ -17,9 +17,7 @@
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 
-&sl {
-    ignore-modifiers;
-};
+&sl { ignore-modifiers; };
 
 / {
     behaviors {
@@ -95,6 +93,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&sl 5>, <&kp O>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -103,11 +102,13 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp O>, <&kp O>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <0>;
         };
 
         // Typo layer: hold-tap variants (hold=mod, tap=o_letter — toujours minuscule, Shift sans effet)
+
         hml_ot: hml_ot {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -115,6 +116,7 @@
             quick-tap-ms = <175>;
             #binding-cells = <2>;
             bindings = <&kp>, <&o_then>;
+
             hold-trigger-key-positions = <5 6 7 8 9 19 18 17 16 15 23 24 25 29 28 27 26>;
             require-prior-idle-ms = <200>;
             hold-trigger-on-release;
@@ -127,6 +129,7 @@
             quick-tap-ms = <150>;
             #binding-cells = <2>;
             bindings = <&kp>, <&o_then>;
+
             hold-trigger-key-positions = <5 6 7 8 9 19 18 17 16 15 23 24 25 29 28 27 26>;
             require-prior-idle-ms = <100>;
             hold-trigger-on-release;
@@ -139,6 +142,7 @@
             quick-tap-ms = <175>;
             #binding-cells = <2>;
             bindings = <&kp>, <&o_then>;
+
             hold-trigger-key-positions = <4 3 2 1 0 10 11 12 13 14 22 21 20 26 27 28 29>;
             require-prior-idle-ms = <200>;
             hold-trigger-on-release;
@@ -151,6 +155,7 @@
             quick-tap-ms = <150>;
             #binding-cells = <2>;
             bindings = <&kp>, <&o_then>;
+
             hold-trigger-key-positions = <4 3 2 1 0 10 11 12 13 14 22 21 20 26 27 28 29>;
             require-prior-idle-ms = <100>;
             hold-trigger-on-release;
@@ -163,6 +168,7 @@
             quick-tap-ms = <175>;
             #binding-cells = <2>;
             bindings = <&mo>, <&o_then>;
+
             hold-trigger-key-positions = <5 6 7 8 9 19 18 17 16 15 23 24 25 29 28 27 26>;
             require-prior-idle-ms = <200>;
             hold-trigger-on-release;
@@ -271,11 +277,11 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_tap &no_shift_o>,
-                <&macro_param_1to1>,
-                <&macro_tap &kp MACRO_PLACEHOLDER>;
+                <&macro_tap>,
+                <&no_shift_o &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>;
         };
-
     };
 
     keymap {
@@ -331,10 +337,10 @@
 
         Typo {
             bindings = <
-&o_then Q    &o_then W    &o_then E        &o_then R          &o_then T            &o_then Y  &o_then U          &o_then I        &o_then O    &o_then P
-&hml_ot LGUI A   &hml_ot RALT S   &hml_ot LCTRL D      &f_hml_ot LSHFT F      &hrl_ot 0 G              &o_then H  &f_hmr_ot RSHFT J      &hmr_ot RCTRL K      &hmr_ot RALT L   &hmr RGUI SEMICOLON
-                 &o_then X    &hml_ot LALT C        &hrl_ot 4 V                                     &o_then M  &hmr LALT COMMA        &kp DOT
-                                                        &o_then SPACE          &mt LEFT_SHIFT TAB       &mt RALT ENTER  &lt 2 BSPC
+&o_then Q       &o_then W       &o_then E        &o_then R          &kp Z                 &kp Y           &kp Y              &o_then I        &o_then O       &o_then P
+&hml_ot LGUI A  &hml_ot RALT S  &hml_ot LCTRL D  &f_hml_ot LSHFT F  &kp B                 &o_then H       &f_hmr_ot RSHFT J  &hmr_ot RCTRL K  &hmr_ot RALT L  &hmr RGUI SEMICOLON
+                &o_then X       &hml_ot LALT C   &hrl_ot 4 V                                              &kp SLASH          &hmr LALT COMMA  &kp DOT
+                                                 &o_then SPACE      &mt LEFT_SHIFT TAB    &mt RALT ENTER  &lt 2 BSPC
             >;
         };
     };
